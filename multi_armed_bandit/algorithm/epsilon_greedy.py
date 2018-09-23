@@ -15,7 +15,7 @@ class EpsilonGreedy(MABAlgorithm):
     def __init__(self, arms: List[Arm], epsilon: float) -> None:
         super().__init__(arms)
 
-        if not (0.0 <= epsilon < 1.0):
+        if not (0.0 < epsilon < 1.0):
             raise ValueError("epsilon is not between 0 and 1")
 
         self._epsilon = epsilon
