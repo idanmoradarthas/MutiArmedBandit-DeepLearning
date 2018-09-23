@@ -25,10 +25,7 @@ class Softmax(MABAlgorithm):
 
     def select_arm(self, iteration_number: int) -> int:
         exp = numpy.exp(self._states / self._get_temperature(iteration_number))
-        with warnings.catch_warnings(record=True) as w:
-            probabilities = exp / numpy.sum(exp, axis=0)
-            if w:
-                print()
+        probabilities = exp / numpy.sum(exp, axis=0)
         return int(numpy.argmax(numpy.random.multinomial(1, probabilities)))
 
     def _get_temperature(self, iteration_number: int):
