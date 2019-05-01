@@ -1,6 +1,6 @@
 # Multi Armed Bandit Algorithm W\ Deep Learning
 
-Build using python 3.6.6 with tox 3.4.0 and tensorflow 1.10.0
+Build using python 3.6.6 with tox 3.4.0 and tensorflow 1.12.2
 
 Policies implemented:
 * Epsilon Decreasing
